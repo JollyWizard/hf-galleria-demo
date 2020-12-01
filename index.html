@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=0.5,user-scalable=no">
+    <title>Galleria Folio Theme</title>
+    <style>
+    
+        body, html
+        {
+            background:black
+        }
+    
+        .content, .galleria
+        {
+            min-width:80vw;
+            margin: auto;
+        }
+        
+        .galleria
+        {
+            min-height:80vh;
+        }
+
+    </style>
+
+    <!-- load jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script> 
+
+    <!-- load Galleria -->
+    <script src="./galleria.js"></script>
+    <script src="./plugins/flickr/galleria.flickr.min.js"></script>
+</head>
+<body>
+
+    <div class="content">
+        <div class="galleria">
+           
+        </div>
+    </div>
+    
+    <script>
+    $(function() {
+        // Load the Folio theme
+        Galleria.loadTheme('themes/folio/galleria.folio.js');
+
+        // Initialize Galleria
+        Galleria.run('.galleria', {
+            flickr: 'set:207908'
+        ,   variation: 'dark'
+        ,   thumbSize: 'big'
+        ,   imageSize: 'original'
+        ,   thumbQuality: true
+
+        ,   transition: 'flash'
+        ,   transitionSpeed: 1200
+        });
+    });
+    </script>
+    
+    </body>
+</html>
